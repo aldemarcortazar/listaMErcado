@@ -1,42 +1,59 @@
-import { useEffect, useState } from "react";
+import React from "react";
+import useForm from "../hooks/useForm";
+import './../style/Form.css';
 
-function Form(props) {
-  // State
-  const [enable, setEnable] = useState(false);
-  const [task, setTask] = useState('');
 
-  // Handling Input Change Event
-  const handleChange = (event) => {
-    const newTask = event.target.value;
-    setTask(newTask);
-  }
+const Form = ( {handleAdd} ) => {
 
-  // Side Effect
-  useEffect(() => {
-    if (task.length > 2) {
-      setEnable(true);
-    } else {
-      setEnable(false);
+    const [ values, handleInputChange, reset ] = useForm( {
+        producto: '',
+        precio: 0,
+        descripcion: ''
+    });
+
+    const { producto, precio, descripcion } = values;
+
+    const handleSubmit = ( e ) => {
+        e.preventDefault();
+        handleAdd( values );
+        reset();
     }
-  }, [task]);
+    
 
-  // Handling Form Submit Event
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    props.onAdd(task)
-  }
+    return(
+        <form
+            onSubmit={ handleSubmit }
+        >
+            <input 
+                type="text"
+                name="producto"
+                value={ producto }
+                onChange={ handleInputChange }
+            />
 
-  return (
-    <div className="row">
-      <div className="col-12">
-        <form className="d-flex" onSubmit={handleSubmit}>
-          <input type="text" className="form-control" id="inlineFormInputGroupTarea" placeholder="Descripción de la tarea..." onChange={handleChange} value={task} />
+            <input 
+                type="number"
+                name="precio"
+                value={ precio }
+                onChange={ handleInputChange }
+            />
 
-          <button type="submit" className="btn btn-primary" disabled={!enable}>Agregar</button>
+            <input 
+                type="text"
+                name= "descripcion"
+                value= { descripcion }
+                onChange={ handleInputChange }
+            />
+
+            <input 
+                type="submit" 
+                value="enviar" 
+                
+            />
         </form>
-      </div>
-    </div>
-  );
+    );
+
 }
 
 export default Form;
+
