@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './style/App.css';
 
 import Form from './components/Form';
 import ListTable from "./components/ListTable";

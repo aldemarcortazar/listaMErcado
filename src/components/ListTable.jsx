@@ -1,4 +1,5 @@
 import React from "react";
+import './../style/tipos.css';
 
 
 import ListRow from './ListRow';
@@ -16,9 +17,9 @@ const ListTable = ( { products, setProducts } ) => {
         <table>
             <thead>
                 <tr>
-                    <td>Producto</td>
-                    <td> Precio </td>
-                    <td> descripcion </td>
+                    <td className="tipos">Producto |</td>
+                    <td className="tipos"> Precio |</td>
+                    <td className="tipos"> descripción |</td>
                 </tr>
             </thead>
             <tbody>

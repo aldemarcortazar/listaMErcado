@@ -2,9 +2,8 @@
 
 
 const data = [
-    { id: 1,  producto: 'Lentejas', precio: 2000, descripcion: 'estan buenas'  },
-    { id: 2,  producto: 'Frijoles', precio: 600, descripcion: 'estan buenos'  },
-    { id: 3,  producto: 'leche', precio: 2000, descripcion: 'estan buenas'  },
+    { id: 2,  producto: 'Manzanas  ', precio: 3000, descripcion: ' El paquete'  }
+    /*{ id: 3,  producto: 'Sal  ', precio: 1000, descripcion: ' La libra'  },*/
 
 ];
 

@@ -21,7 +21,7 @@ const Form = ( {handleAdd} ) => {
     
 
     return(
-        <form
+        <form className="formulario"
             onSubmit={ handleSubmit }
         >
             <input 
@@ -47,7 +47,7 @@ const Form = ( {handleAdd} ) => {
 
             <input 
                 type="submit" 
-                value="enviar" 
+                value="Comprar" 
                 
             />
         </form>

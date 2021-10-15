@@ -1,4 +1,5 @@
 import React from "react";
+import './../style/ListRow.css';
 
 
 const ListRow = ( { product, handleDelete } ) => {
@@ -6,7 +7,7 @@ const ListRow = ( { product, handleDelete } ) => {
     const { id, producto, precio, descripcion } =  product;
 
     return(
-        <tr>
+        <tr className="fondo">
             <td> { producto } </td>
             <td> { precio }  </td>
             <td> { descripcion } </td>
@@ -15,7 +16,9 @@ const ListRow = ( { product, handleDelete } ) => {
             <button
                 onClick={ (  ) => handleDelete( id ) }
             > 
-                Eliminar 
+                 <span className="material-icons">
+                        clear
+                    </span>
             </button>
             </td>
         </tr>
