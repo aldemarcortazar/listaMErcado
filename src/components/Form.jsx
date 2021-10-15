@@ -47,7 +47,7 @@ const Form = ( {handleAdd} ) => {
 
             <input 
                 type="submit" 
-                value="Comprar" 
+                value="Añadir" 
                 
             />
         </form>
