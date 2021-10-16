@@ -16,7 +16,7 @@ const ListTable = ( { products, setProducts } ) => {
         <table>
             <thead>
                 <tr>
-                    <td>Producto</td>
+                    <td> Producto </td>
                     <td> Precio </td>
                     <td> descripcion </td>
                 </tr>

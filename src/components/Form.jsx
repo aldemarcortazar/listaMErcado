@@ -6,9 +6,9 @@ import './../style/Form.css';
 const Form = ( {handleAdd} ) => {
 
     const [ values, handleInputChange, reset ] = useForm( {
-        producto: '',
-        precio: 0,
-        descripcion: ''
+        producto : '',
+        precio : 0,
+        descripcion : ''
     });
 
     const { producto, precio, descripcion } = values;
